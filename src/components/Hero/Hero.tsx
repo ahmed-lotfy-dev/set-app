@@ -7,6 +7,7 @@ import fifthLeftShape from "../../assets/shapes/left-5.svg"
 
 import appleStore from "../../assets/icons/apple.svg"
 import googlePlay from "../../assets/icons/google.svg"
+
 type Props = {};
 
 export default function Hero({ }: Props) {

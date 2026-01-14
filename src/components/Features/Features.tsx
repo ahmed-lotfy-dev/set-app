@@ -21,9 +21,7 @@ export default function Features({ }: Props) {
       <div className="mx-auto px-4 py-20">
         {/* The Grid Container */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
-          {/* 1. TOP CARD (Spans 2 columns) */}
           <div className="md:col-span-2 bg-[#DF96AE] rounded-[20px] overflow-hidden px-[10px]">
-            {/* Content here */}
             <div className="flex items-center mt-[60px] ml-[60px] gap-5">
               <div>
                 <img src={featureOneIcon} alt="" className="w-20 h-20" />
@@ -37,7 +35,6 @@ export default function Features({ }: Props) {
           </div>
           {/* 2. LEFT CARD */}
           <div className="bg-[#F4F0E4] rounded-[20px] overflow-hidden flex flex-col">
-            {/* Content here */}
             <img src={cardTwo} alt="first feature picture" />
             <div className="flex flex-col justify-start items-start mt-[60px] gap-5 mb-[53px] px-[60px]">
               <div>
@@ -51,7 +48,6 @@ export default function Features({ }: Props) {
           </div>
           {/* 3. RIGHT CARD */}
           <div className="bg-[#384C75] rounded-[20px] overflow-hidden flex flex-col">
-            {/* Content here */}
             <div className="flex flex-col justify-start items-start mt-[60px] gap-5 mb-[53px] px-[60px]">
               <div>
                 <img src={featureThreeIcon} alt="" className="w-[68px] h-[68px]" />
