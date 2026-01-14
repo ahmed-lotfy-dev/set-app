@@ -1,42 +1,68 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/fonts/Avenir Next LT Pro Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/fonts/Avenir Next LT Pro Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/fonts/Avenir Next LT Pro Bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/fonts/Avenir Next LT Pro It.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  /* Setapp Brand Colors */
+  --color-brand-pink: #E84F7C;
+  --color-brand-blue: #8AD1E8;
+  --color-brand-peach: #F4A261;
+  --color-brand-cream: #E2F2E4;
+  /* Based on 'Stay Secure' label */
+  --color-brand-orange: #E89C6B;
+  --color-brand-purple: #9B51E0;
+  --color-brand-teal: #4AC7D1;
+
+  /* Global Colors */
+  --color-app-bg: hsla(240, 6%, 16%, 1);
+  --color-foreground: #ffffff;
+
+  /* Typography */
+  --font-avenir: "Avenir Next", system-ui, sans-serif;
+  --font-sans: var(--font-avenir);
+}
+
+:root {
+  background-color: var(--color-app-bg);
+  color: var(--color-foreground);
+  font-family: var(--font-avenir);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
