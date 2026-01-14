@@ -9,6 +9,7 @@
         "lucide-react": "^0.562.0",
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
+        "tailwind-squircle2": "^2.0.1",
         "tailwindcss": "^4.1.18",
       },
       "devDependencies": {
@@ -445,6 +446,8 @@
     "strip-json-comments": ["strip-json-comments@3.1.1", "", {}, "sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig=="],
 
     "supports-color": ["supports-color@7.2.0", "", { "dependencies": { "has-flag": "^4.0.0" } }, "sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw=="],
+
+    "tailwind-squircle2": ["tailwind-squircle2@2.0.1", "", { "peerDependencies": { "tailwindcss": ">=4.0.0" } }, "sha512-tOFYMgESbhUARFT+YHhzaHUwjdu1NiHPo2e/WiqVh5ZeZQAlZVHgz6gxAoVuqXV258fx8vh12Mn8e8qF3S+6AA=="],
 
     "tailwindcss": ["tailwindcss@4.1.18", "", {}, "sha512-4+Z+0yiYyEtUVCScyfHCxOYP06L5Ne+JiHhY2IjR2KWMIWhJOYZKLSGZaP5HkZ8+bY0cxfzwDE5uOmzFXyIwxw=="],
 
