@@ -26,6 +26,14 @@
 
 @font-face {
   font-family: "Avenir Next";
+  src: url("./assets/fonts/Avenir Next LT Pro Bold.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next";
   src: url("./assets/fonts/Avenir Next LT Pro It.otf") format("opentype");
   font-weight: 400;
   font-style: italic;
@@ -33,16 +41,6 @@
 }
 
 @theme {
-  /* Setapp Brand Colors */
-  --color-brand-pink: #E84F7C;
-  --color-brand-blue: #8AD1E8;
-  --color-brand-peach: #F4A261;
-  --color-brand-cream: #E2F2E4;
-  /* Based on 'Stay Secure' label */
-  --color-brand-orange: #E89C6B;
-  --color-brand-purple: #9B51E0;
-  --color-brand-teal: #4AC7D1;
-
   /* Global Colors */
   --color-app-bg: hsla(240, 6%, 16%, 1);
   --color-foreground: #ffffff;
@@ -58,11 +56,4 @@
   font-family: var(--font-avenir);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }

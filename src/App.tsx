@@ -1,10 +1,15 @@
 import "./App.css";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
 
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <div className="font-avenir text-white min-h-screen">
+      <Header />
+      <main>
+        <Hero />
+      </main>
+    </div>
   );
 }
 
