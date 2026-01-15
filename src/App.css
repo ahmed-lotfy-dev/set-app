@@ -52,7 +52,6 @@
 }
 
 :root {
-  background-color: var(--color-app-bg);
   color: var(--color-foreground);
   font-family: var(--font-avenir);
   -webkit-font-smoothing: antialiased;

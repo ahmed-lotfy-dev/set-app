@@ -5,21 +5,16 @@ import featureOneIcon from "../../assets/images/app-feature-icon-1.png"
 import featureTwoIcon from "../../assets/images/app-feature-icon-2.png"
 import featureThreeIcon from "../../assets/images/app-feature-icon-3.png"
 import arrowRight from "../../assets/icons/arrow-right.svg"
-type Props = {}
-
-export default function Features({ }: Props) {
+export default function Features() {
   return (
-    <section className="px-32">
-      {/* section heading */}
+    <section className="m-auto max-w-[1180px] pb-[133px]">
       <div className="border-t"></div>
-      <div className="flex justify-between flex-1 mt-[100px] mb-[88px]">
+      <div className="flex justify-between flex-1 mt-[100px] pb-[88px]">
         <h2 className="font-avenir font-medium text-4xl leading-12.75">What you get on Setapp.</h2>
         <p className="font-avenir text-lg max-w-[600px] font-normal pl-[10px] pr-[45px] leading-8">With a single monthly subscription at $9.99, you get 240+ apps for
           your Mac.</p>
       </div>
-      {/* features */}
-      <div className="mx-auto px-4 py-20">
-        {/* The Grid Container */}
+      <div className="mx-auto py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
           <div className="md:col-span-2 bg-[#DF96AE] rounded-[20px] overflow-hidden px-[10px]">
             <div className="flex items-center mt-[60px] ml-[60px] gap-5">
@@ -31,11 +26,11 @@ export default function Features({ }: Props) {
                 <p className="font-avenir text-lg leading-8">Remove junk, scan for malware, wipe email attachments</p>
               </div>
             </div>
-            <img src={cardOne} alt="first feature picture" className="px-[37px]" />
+            <img src={cardOne} alt="Mac cleaning feature screenshot" className="px-[37px]" />
           </div>
           {/* 2. LEFT CARD */}
           <div className="bg-[#F4F0E4] rounded-[20px] overflow-hidden flex flex-col">
-            <img src={cardTwo} alt="first feature picture" />
+            <img src={cardTwo} alt="Coding app feature display" />
             <div className="flex flex-col justify-start items-start mt-[60px] gap-5 mb-[53px] px-[60px]">
               <div>
                 <img src={featureTwoIcon} alt="" className="w-[68px] h-[68px]" />
@@ -57,7 +52,7 @@ export default function Features({ }: Props) {
                 <p className="font-avenir text-lg leading-8">Quickly access links to your meetings from menu bar</p>
               </div>
             </div>
-            <img src={cardThree} alt="first feature picture" />
+            <img src={cardThree} alt="Meeting scheduler feature preview" />
           </div>
         </div>
       </div>
@@ -70,8 +65,7 @@ export default function Features({ }: Props) {
         </a>
       </div>
 
-      {/* section footer */}
-      <div className="flex justify-between flex-1 mt-[100px] mb-[88px]">
+      <div className="flex justify-between flex-1 mt-[100px] pb-[88px]">
         <h2 className="font-avenir font-semibold text-4xl leading-12.75">Your Setapp journey.</h2>
         <p className="font-avenir text-lg max-w-[600px] font-normal pl-[10px] pr-[45px] leading-8">Type in your task into Setapp search and get instant app
           recommendations.</p>
