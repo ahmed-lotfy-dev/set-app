@@ -31,15 +31,15 @@ export default function Hero({ }: Props) {
 
       {/* action buttons */}
       <div className="flex items-center gap-5 mt-12 mb-6.75">
-        <a href="#" className="bg-white text-black font-normal px-7.5 h-[60px] flex items-center rounded-[] text-lg  cursor-pointer">
+        <a href="#" className="bg-white text-black font-normal px-7.5 h-[60px] rounded-btn flex items-center text-lg  cursor-pointer">
           Try free for 7 days
         </a>
         <div className="flex items-center gap-3">
-          <a href="#" className="w-[60px] h-[60px] bg-white rounded-[] flex justify-center items-center shadow-lg transition-colors cursor-pointer">
+          <a href="#" className="w-[60px] h-[60px] bg-white rounded-btn flex justify-center items-center shadow-lg transition-colors cursor-pointer">
             <img src={appleStore} alt="Apple Store" className="w-10 h-10 object-contain" />
           </a>
 
-          <a href="#" className="w-[60px] h-[60px] bg-white rounded-[] flex justify-center items-center shadow-lg transition-colors cursor-pointer">
+          <a href="#" className="w-[60px] h-[60px] bg-white rounded-btn flex justify-center items-center shadow-lg transition-colors cursor-pointer">
             <img src={googlePlay} alt="Google Play Store" className="w-10 h-10 object-contain" />
           </a>
         </div>
