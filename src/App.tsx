@@ -33,6 +33,7 @@ function App() {
       {/* CTA Section */}
       <div className="bg-linear-to-b from-white from-50% to-app-bg to-50%">
         <CTA />
+        <div className="border border-white"></div>
       </div>
       {/* Footer */}
       <div className="bg-app-bg">
