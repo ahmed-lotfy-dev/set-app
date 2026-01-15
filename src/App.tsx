@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Testimonials from "./components/Testimonials/Testimonials";
 import CTA from "./components/CTA/CTA";
+import SocialReviews from "./components/SocialReviews/SocialReviews";
 
 function App() {
   return (
@@ -27,14 +28,15 @@ function App() {
       <div className="bg-linear-to-b from-app-bg from-50% to-white to-50%">
         <Testimonials />
       </div>
+      {/* Social Reviews */}
+      <SocialReviews />
       {/* CTA Section */}
       <div className="bg-linear-to-b from-white from-50% to-app-bg to-50%">
         <CTA />
       </div>
-
       {/* Footer */}
       <div className="bg-app-bg">
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );
