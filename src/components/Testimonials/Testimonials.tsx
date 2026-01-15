@@ -31,7 +31,7 @@ export default function Testimonials({ }: Props) {
               </p>
               {/* Play Button */}
               <button
-                className="w-[74px] h-[74px] mt-[131px] bg-white flex items-center justify-center border-none outline-none cursor-pointer"
+                className="w-[74px] h-[74px] mt-[131px] rounded-full bg-white flex items-center justify-center border-none outline-none cursor-pointer"
                 aria-label="Play testimonial"
               >
                 <img src={playBtn} alt="testimonial play button" />
@@ -51,11 +51,11 @@ export default function Testimonials({ }: Props) {
         {/* Pagination Dots - Below the card */}
         <div className="flex justify-center items-center gap-3 my-[24px]">
           {/* Active Dot */}
-          <span className="w-3 h-3 bg-[#1D1D22]" />
+          <span className="w-3 h-3 rounded-full bg-[#1D1D22]" />
           {/* Inactive Dots */}
-          <span className="w-3 h-3 bg-[#D5D4D4]" />
-          <span className="w-3 h-3 bg-[#D5D4D4]" />
-          <span className="w-3 h-3 bg-[#D5D4D4]" />
+          <span className="w-3 h-3 rounded-full bg-[#D5D4D4]" />
+          <span className="w-3 h-3 rounded-full bg-[#D5D4D4]" />
+          <span className="w-3 h-3 rounded-full bg-[#D5D4D4]" />
         </div>
       </div>
     </section>
