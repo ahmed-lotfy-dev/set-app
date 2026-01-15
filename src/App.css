@@ -49,6 +49,10 @@
   /* Typography */
   --font-avenir: "Avenir Next", system-ui, sans-serif;
   --font-sans: var(--font-avenir);
+
+  /* Radii */
+  --radius-btn: 6px;
+  --radius-card: 20px;
 }
 
 :root {

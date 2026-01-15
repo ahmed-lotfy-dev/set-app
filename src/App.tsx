@@ -1,8 +1,10 @@
 import "./App.css";
 import Features from "./components/Features/Features";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Testimonials from "./components/Testimonials/Testimonials";
+import CTA from "./components/CTA/CTA";
 
 function App() {
   return (
@@ -25,7 +27,14 @@ function App() {
       <div className="bg-linear-to-b from-app-bg from-50% to-white to-50%">
         <Testimonials />
       </div>
-      {/* Social Testimonials */}
+      {/* CTA Section */}
+      <div className="bg-linear-to-b from-white from-50% to-app-bg to-50%">
+        <CTA />
+      </div>
+
+      {/* Footer */}
+      <div className="bg-app-bg">
+      </div>
     </div>
   );
 }

@@ -7,11 +7,11 @@ type Props = {}
 
 export default function Testimonials({ }: Props) {
   return (
-    <section className="w-full px-6">
-      <div className="m-auto max-w-[1355px]">
+    <section className="w-full px-6 pt-[70px]">
+      <div className="max-w-[1355px] m-auto">
         <div className="flex items-center justify-between">
           {/* Testimonial Card */}
-          <div className="bg-[#765070] rounded-[32px] overflow-hidden min-h-[500px] flex mb-[10px] relative">
+          <div className="bg-[#765070] rounded-card overflow-hidden min-h-[500px] flex mb-[10px] relative">
             {/* Carousel Arrows */}
             <button className="absolute top-[64px] right-[106px] z-10 cursor-pointer hover:opacity-70 transition-opacity">
               <img src={carouselArrowLeft} alt="" className="w-3.5 h-6" />
@@ -31,7 +31,7 @@ export default function Testimonials({ }: Props) {
               </p>
               {/* Play Button */}
               <button
-                className="w-[74px] h-[74px] mt-[131px] bg-white rounded-full flex items-center justify-center border-none outline-none cursor-pointer"
+                className="w-[74px] h-[74px] mt-[131px] bg-white flex items-center justify-center border-none outline-none cursor-pointer"
                 aria-label="Play testimonial"
               >
                 <img src={playBtn} alt="testimonial play button" />
@@ -51,11 +51,11 @@ export default function Testimonials({ }: Props) {
         {/* Pagination Dots - Below the card */}
         <div className="flex justify-center items-center gap-3 my-[24px]">
           {/* Active Dot */}
-          <span className="w-3 h-3 rounded-full bg-[#1D1D22]" />
+          <span className="w-3 h-3 bg-[#1D1D22]" />
           {/* Inactive Dots */}
-          <span className="w-3 h-3 rounded-full bg-[#D5D4D4]" />
-          <span className="w-3 h-3 rounded-full bg-[#D5D4D4]" />
-          <span className="w-3 h-3 rounded-full bg-[#D5D4D4]" />
+          <span className="w-3 h-3 bg-[#D5D4D4]" />
+          <span className="w-3 h-3 bg-[#D5D4D4]" />
+          <span className="w-3 h-3 bg-[#D5D4D4]" />
         </div>
       </div>
     </section>

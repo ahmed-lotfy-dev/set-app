@@ -41,7 +41,7 @@ export default function Navbar({ }: Props) {
             <a
               key={item.label}
               href={item.href}
-              className="rounded-lg border border-white/20 px-[23px] py-1.5 text-sm font-light leading-5 hover:bg-white/5 transition-all text-center"
+              className="rounded-btn border border-white/20 px-[23px] py-1.5 text-sm font-light leading-5 hover:bg-white/5 transition-all text-center"
             >
               {item.label}
             </a>
