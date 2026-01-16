@@ -1,3 +1,4 @@
+import { useState } from "react"
 import facebook from "../../assets/icons/social-fb-icon.svg"
 import twitter from "../../assets/icons/social-twitter-icon.svg"
 import instagram from "../../assets/icons/social-instagram-icon.svg"
@@ -33,10 +34,74 @@ const reviews = [
     handle: "@meredith.sweet.silberstein",
     socialIcon: facebookSm,
     bgColor: "#765070"
+  },
+  {
+    text: "Setapp has completely transformed how I discover apps. The curated selection is simply unmatched in the ecosystem.",
+    author: "David Chen",
+    handle: "@davidchen_tech",
+    socialIcon: twitterSm,
+    bgColor: "#7289A1"
+  },
+  {
+    text: "I can't imagine my workflow without Setapp. It pays for itself ten times over with just a few of the pro tools.",
+    author: "Sarah Miller",
+    handle: "@miller_design",
+    socialIcon: instagramSm,
+    bgColor: "#D7B38D"
+  },
+  {
+    text: "Best subscription service I pay for. The quality of apps is consistently high and the platform keeps getting better.",
+    author: "James Wilson",
+    handle: "@jwilson_dev",
+    socialIcon: facebookSm,
+    bgColor: "#765070"
+  },
+  {
+    text: "Finally a subscription that actually provides value. No bloat, just premium apps that I actually use daily.",
+    author: "Emily Zhang",
+    handle: "@emily_z",
+    socialIcon: twitterSm,
+    bgColor: "#7289A1"
+  },
+  {
+    text: "The sheer variety of tools available is mind-blowing. From productivity to creativity, it covers everything.",
+    author: "Michael Ross",
+    handle: "@mross_creative",
+    socialIcon: instagramSm,
+    bgColor: "#D7B38D"
+  },
+  {
+    text: "Setapp is the secret weapon for any Mac power user. It's the first thing I install on a new machine.",
+    author: "Lisa Park",
+    handle: "@lisa_park_cloud",
+    socialIcon: facebookSm,
+    bgColor: "#765070"
   }
 ];
 
+const chunkSize = 3;
+const chunks = Array.from({ length: Math.ceil(reviews.length / chunkSize) }, (_, i) =>
+  reviews.slice(i * chunkSize, i * chunkSize + chunkSize)
+);
+
 export default function SocialReviews({ }: Props) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) =>
+      prev === chunks.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? chunks.length - 1 : prev - 1
+    );
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
   return (
     <section className="w-full bg-[#FEFEFE] text-[#26262B] py-[88px]">
       <div className="max-w-[1260px] m-auto px-6 relative">
@@ -70,32 +135,47 @@ export default function SocialReviews({ }: Props) {
 
         {/* Navigation Arrows - Absolute Positioned */}
         <div className="flex justify-end items-center gap-[30px] z-10 mt-[25px] mb-[20px]">
-          <button className="cursor-pointer hover:opacity-50 transition-opacity">
+          <button
+            className="cursor-pointer hover:opacity-50 transition-opacity"
+            onClick={prevSlide}
+          >
             <img src={carouselArrowLeft} alt="Previous" className="w-[14px] h-[24px]" />
           </button>
-          <button className="cursor-pointer hover:opacity-50 transition-opacity">
+          <button
+            className="cursor-pointer hover:opacity-50 transition-opacity"
+            onClick={nextSlide}
+          >
             <img src={carouselArrowRight} alt="Next" className="w-[14px] h-[24px]" />
           </button>
         </div>
 
-        {/* Reviews Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-[25px]">
-          {reviews.map((review, idx) => (
-            <ReviewCard key={idx} {...review} />
-          ))}
+        <div className="overflow-hidden w-full mt-[25px]">
+          <div
+            className="flex transition-transform duration-500 ease-out"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {chunks.map((chunk, chunkIndex) => (
+              <div key={chunkIndex} className="min-w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+                {chunk.map((review, idx) => (
+                  <ReviewCard key={idx} {...review} />
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Pagination Dots */}
         <div className="flex justify-center items-center gap-[25px] px-[23px] mt-[24px] mb-[25px]">
-          <span className="w-3 h-3 rounded-full bg-[#1D1D22]" />
-          <span className="w-3 h-3 rounded-full bg-[#D5D4D4]" />
-          <span className="w-3 h-3 rounded-full bg-[#D5D4D4]" />
-          <span className="w-3 h-3 rounded-full bg-[#D5D4D4]" />
-          <span className="w-3 h-3 rounded-full bg-[#D5D4D4]" />
-          <span className="w-3 h-3 rounded-full bg-[#D5D4D4]" />
+          {chunks.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-[#1D1D22]" : "bg-[#D5D4D4]"}`}
+            />
+          ))}
         </div>
       </div>
       <div className="border-b"></div>
     </section>
-)
+  )
 }
