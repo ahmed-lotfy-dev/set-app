@@ -1,9 +1,10 @@
 import LogoImage from '../../assets/logo.svg'
 import EnglisSvg from "../../assets/icons/en.svg"
-import { motion, type Variants } from "framer-motion"
+import { motion, type Variants } from "motion/react"
 
-type Props = {}
-
+type Props = {
+  onComplete: () => void
+}
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -16,15 +17,14 @@ const containerVariants: Variants = {
 }
 
 const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 10 },
-  visible: { 
-    opacity: 1, 
+  hidden: { opacity: 0, y: -10 },
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" }
   },
 }
 
-export default function Navbar({ }: Props) {
+export default function Navbar({ onComplete }: Props) {
   const navItems = [
     { type: 'link', label: "How it works", href: "/process" },
     { type: 'link', label: "All apps", href: "/apps" },
@@ -39,16 +39,17 @@ export default function Navbar({ }: Props) {
   ];
 
   return (
-    <motion.nav 
-      className='w-full flex justify-between items-center gap-6.5' 
-      variants={containerVariants} 
-      initial="hidden" 
+    <motion.nav
+      className='w-full flex justify-between items-center gap-6.5'
+      variants={containerVariants}
+      initial="hidden"
       animate="visible"
+      onAnimationComplete={() => onComplete?.()}
     >
-      <motion.img 
+      <motion.img
         variants={itemVariants}
-        src={LogoImage} 
-        alt="Setapp Logo" 
+        src={LogoImage}
+        alt="Setapp Logo"
       />
 
       <ul className="flex items-center gap-6.5">
@@ -64,28 +65,31 @@ export default function Navbar({ }: Props) {
           }
           if (item.type === 'separator') {
             return (
-              <motion.div 
+              <motion.div
                 variants={itemVariants}
-                key={`sep-${index}`} 
-                className="h-4 w-px bg-white/20" 
-                aria-hidden="true" 
+                key={`sep-${index}`}
+                className="h-4 w-px bg-white/20"
+                aria-hidden="true"
               />
             );
           }
           if (item.type === 'lang') {
             return (
-              <motion.img 
+              <motion.img
                 variants={itemVariants}
-                key={`lang-${index}`} 
-                src={item.icon} 
-                alt="Language switcher" 
-                className="w-6.5 cursor-pointer hover:opacity-80 transition-opacity" 
+                key={`lang-${index}`}
+                src={item.icon}
+                alt="Language switcher"
+                className="w-6.5 cursor-pointer hover:opacity-80 transition-opacity"
               />
             );
           }
           if (item.type === 'action') {
             return (
-              <motion.a 
+              <motion.a
+                whileHover={{
+                  scale: 1.03, translateY: -1
+                }}
                 variants={itemVariants}
                 key={item.label}
                 href={item.href}

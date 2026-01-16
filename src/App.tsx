@@ -6,17 +6,18 @@ import Hero from "./components/Hero/Hero";
 import Testimonials from "./components/Testimonials/Testimonials";
 import CTA from "./components/CTA/CTA";
 import SocialReviews from "./components/SocialReviews/SocialReviews";
+import { useState } from "react";
 
 function App() {
+  const [headerFinished, setHeaderFinished] = useState<boolean>(false)
   return (
     <div className="font-avenir text-white min-h-screen">
-
       {/* Header Hero */}
       <div className="bg-app-bg">
         <section className="h-svh flex flex-col m-auto px-10 max-w-[1440px]">
-          <Header />
+          <Header onComplete={() => setHeaderFinished(true)} />
           <main className="flex-1 flex flex-col mt-[150px]">
-            <Hero />
+            <Hero isReady={headerFinished} />
           </main>
         </section>
       </div>
