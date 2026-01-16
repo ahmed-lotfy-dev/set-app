@@ -11,7 +11,7 @@ import { useState } from "react";
 function App() {
   const [headerFinished, setHeaderFinished] = useState<boolean>(false)
   return (
-    <div className="font-avenir text-white min-h-screen">
+    <div className="w-full font-avenir text-white min-h-screen">
       {/* Header Hero */}
       <div className="bg-app-bg">
         <section className="h-svh flex flex-col m-auto px-10 max-w-[1440px]">

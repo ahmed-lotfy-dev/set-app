@@ -68,8 +68,8 @@ export default function Hero({ }: Props) {
       {/* Middle Content Wrapper */}
       <motion.div variants={centerVariants} className="flex flex-col items-center z-20">
         {/* logo centered content */}
-        <div className="bg-black w-40 h-40 flex justify-center items-center squircle-soft mb-9.75">
-          <img src={LogoImage} alt="Header Logo" className="w-40 h-40 px-8.5 py-4.5" />
+        <div className="bg-black w-24 md:w-32 lg:w-40 h-24 md:h-32 lg:h-40  flex justify-center items-center squircle-soft mb-9.75 ">
+          <img src={LogoImage} alt="Header Logo" className="w-24 md:w-32 lg:w-40 h-24 md:h-32 lg:h-40 px-8.5 py-4.5" />
         </div>
         {/* app catch phrase */}
         <h2 className="font-bold text-[64px] text-center max-w-2xl px-14 leading-17">
@@ -197,8 +197,8 @@ export default function Hero({ }: Props) {
         </div>
       </motion.div>
 
-      <motion.div variants={shapeVariants} className="absolute top-[440px] right-[133px]">
-        <div className="relative flex justify-center items-center w-[151px] h-[152px]">
+      <motion.div variants={shapeVariants} className="absolute top-[440px] right-[133px] ">
+        <div className="relative flex justify-center items-center w-[151px] h-[152px] ">
           <img className="inset-0 w-full h-full object-contain" src={fifthRightShape} alt="Floating Shape" />
           <span className="absolute text-[#A54E34] w-full text-2xl font-bold text-center leading-none -rotate-5 uppercase">
             code easier
