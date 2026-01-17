@@ -14,7 +14,7 @@ function App() {
     <div className="w-full font-avenir text-white min-h-screen">
       {/* Header Hero */}
       <div className="bg-app-bg">
-        <section className="h-svh flex flex-col m-auto px-10 max-w-[1440px]">
+        <section className="h-svh flex flex-col m-auto px-5 md:px-10 max-w-7xl">
           <Header onComplete={() => setHeaderFinished(true)} />
           <main className="flex-1 flex flex-col mt-[150px]">
             <Hero isReady={headerFinished} />
