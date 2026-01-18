@@ -103,7 +103,7 @@ export default function SocialReviews({ }: Props) {
     setCurrentIndex(index);
   };
   return (
-    <section className="w-full bg-[#FEFEFE] text-[#26262B] py-[88px]">
+    <section className="w-full bg-section-bg text-text-dark py-[88px]">
       <div className="max-w-[1260px] m-auto px-6 relative">
         {/* Social Heading Area */}
         <div className="flex justify-between items-center gap-[180px] mb-[25px]">
@@ -112,7 +112,7 @@ export default function SocialReviews({ }: Props) {
           </h2>
 
           <div className="flex items-center gap-10 flex-1">
-            <p className="text-[18px] font-normal leading-[32px] text-[#26262B]/60 max-w-[300px]">
+            <p className="text-[18px] font-normal leading-[32px] text-text-dark/60 max-w-[300px]">
               What you say about how Setapp powers you up.
             </p>
 
@@ -170,7 +170,7 @@ export default function SocialReviews({ }: Props) {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-[#1D1D22]" : "bg-[#D5D4D4]"}`}
+              className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-active-dot" : "bg-inactive-dot"}`}
             />
           ))}
         </div>

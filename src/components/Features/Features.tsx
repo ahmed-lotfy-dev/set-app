@@ -16,12 +16,12 @@ export default function Features() {
       </div>
       <div className="mx-auto py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
-          <div className="md:col-span-2 bg-[#DF96AE] rounded-card overflow-hidden px-[10px]">
+          <div className="md:col-span-2 bg-feature-pink rounded-card overflow-hidden px-[10px]">
             <div className="flex items-center mt-[60px] ml-[60px] gap-5">
               <div>
                 <img src={featureOneIcon} alt="" className="w-20 h-20" />
               </div>
-              <div className="flex flex-col gap-1 text-[#26262B]">
+              <div className="flex flex-col gap-1 text-text-dark">
                 <h3 className="font-avenir font-semibold text-2xl">Keep your Mac clean</h3>
                 <p className="font-avenir text-lg leading-8">Remove junk, scan for malware, wipe email attachments</p>
               </div>
@@ -29,25 +29,25 @@ export default function Features() {
             <img src={cardOne} alt="Mac cleaning feature screenshot" className="px-[37px]" />
           </div>
           {/* 2. LEFT CARD */}
-          <div className="bg-[#F4F0E4] rounded-card overflow-hidden flex flex-col">
+          <div className="bg-feature-beige rounded-card overflow-hidden flex flex-col">
             <img src={cardTwo} alt="Coding app feature display" />
             <div className="flex flex-col justify-start items-start mt-[60px] gap-5 mb-[53px] px-[60px]">
               <div>
                 <img src={featureTwoIcon} alt="" className="w-[68px] h-[68px]" />
               </div>
-              <div className="flex flex-col gap-1 text-[#26262B]">
+              <div className="flex flex-col gap-1 text-text-dark">
                 <h3 className="font-avenir font-semibold text-2xl">Write code</h3>
                 <p className="font-avenir text-lg leading-8">Quickly access links to your meetings from menu bar</p>
               </div>
             </div>
           </div>
           {/* 3. RIGHT CARD */}
-          <div className="bg-[#384C75] rounded-card overflow-hidden flex flex-col">
+          <div className="bg-feature-blue rounded-card overflow-hidden flex flex-col">
             <div className="flex flex-col justify-start items-start mt-[60px] gap-5 mb-[53px] px-[60px]">
               <div>
                 <img src={featureThreeIcon} alt="" className="w-[68px] h-[68px]" />
               </div>
-              <div className="flex flex-col gap-1 text-[#FFFFFF]">
+              <div className="flex flex-col gap-1 text-white">
                 <h3 className="font-avenir font-semibold text-2xl">Join meetings in a click</h3>
                 <p className="font-avenir text-lg leading-8">Quickly access links to your meetings from menu bar</p>
               </div>

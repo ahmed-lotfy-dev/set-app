@@ -46,9 +46,44 @@
   --color-app-bg: hsla(240, 6%, 16%, 1);
   --color-foreground: #ffffff;
 
+  /* Custom Colors */
+  --color-input-bg: #3A3A3F;
+  --color-protected-bg: #404547;
+  --color-active-dot: #1D1D22;
+  --color-inactive-dot: #D5D4D4;
+  --color-testimonial-bg: #765070;
+  --color-section-bg: #FEFEFE;
+  --color-text-dark: #26262B;
+  --color-card-bg: #F5F5F5;
+  --color-feature-pink: #DF96AE;
+  --color-feature-beige: #F4F0E4;
+  --color-feature-blue: #384C75;
+
   /* Typography */
   --font-avenir: "Avenir Next", system-ui, sans-serif;
   --font-sans: var(--font-avenir);
+
+  /* Text Sizes */
+  --text-heading-xl: clamp(2rem, 4vw, 3.5rem);
+  --leading-heading-xl: clamp(2rem, 4.75vw, 6.5rem);
+  --text-btn: clamp(0.875rem, 2vw, 1rem);
+  --text-body: clamp(0.875rem, 2vw, 1rem);
+
+  /* Spacing - Clamps */
+  --spacing-btn-x: clamp(1.2rem, 3vw, 1.875rem);
+  --spacing-btn-y: clamp(2.5rem, 5vw, 3.75rem);
+  --spacing-icon: clamp(1.5rem, 3vw, 2.5rem);
+  --spacing-gap: clamp(0.5rem, 2vw, 0.75rem);
+
+  /* Sizing - Clamps */
+  --size-logo-w: clamp(6rem, 12vw, 10rem);
+  --size-logo-h: clamp(6rem, 12vw, 10rem);
+  --size-btn-icon: clamp(2.5rem, 5vw, 3.75rem);
+
+  /* Absolute Positioning */
+  --position-nav-top: 64px;
+  --position-nav-right-far: 106px;
+  --position-nav-right-near: 46px;
 
   /* Radii */
   --radius-btn: 6px;

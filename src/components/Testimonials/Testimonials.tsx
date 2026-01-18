@@ -66,12 +66,12 @@ export default function Testimonials({ }: Props) {
         <div className="flex items-center justify-between relative">
           {/* Testimonial Card */}
           <button
-            className="absolute top-[64px] right-[106px] z-10 cursor-pointer hover:opacity-70 transition-opacity"
+            className="absolute top-position-nav-top right-position-nav-right-far z-10 cursor-pointer hover:opacity-70 transition-opacity"
             onClick={prevSlide}>
             <img src={carouselArrowLeft} alt="" className="w-3.5 h-6" />
           </button>
           <button
-            className="absolute top-[64px] right-[46px] z-10 cursor-pointer hover:opacity-70 transition-opacity"
+            className="absolute top-position-nav-top right-position-nav-right-near z-10 cursor-pointer hover:opacity-70 transition-opacity"
             onClick={nextSlide}>
             <img src={carouselArrowRight} alt="" className="w-3.5 h-6" />
           </button>
@@ -95,8 +95,7 @@ export default function Testimonials({ }: Props) {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-[#1D1D22]" : "bg-[#D5D4D4]"
-                }`}
+              className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-active-dot" : "bg-inactive-dot"}`}
             />
           ))}
         </div>

@@ -48,11 +48,11 @@ export default function Hero({ }: Props) {
       {/* Middle Content Wrapper */}
       <motion.div variants={centerVariants} className="flex flex-col items-center z-20">
         {/* logo centered content */}
-        <div className="bg-black w-24 md:w-32 lg:w-40 h-24 md:h-32 lg:h-40  flex justify-center items-center squircle-soft mb-9.75 ">
-          <img src={LogoImage} alt="Header Logo" className="w-24 md:w-32 lg:w-40 h-24 md:h-32 lg:h-40 px-8.5 py-4.5" />
+        <div className="bg-black w-size-logo-w h-size-logo-h flex justify-center items-center squircle-soft mb-9.75">
+          <img src={LogoImage} alt="Header Logo" className="w-size-logo-w h-size-logo-h px-8.5 py-4.5" />
         </div>
         {/* app catch phrase */}
-        <h2 className="font-bold text-[clamp(2rem,4vw,3.5rem)] leading-[clamp(2rem,4.75vw,6.5rem)]  text-center max-w-2xl px-14 ">
+        <h2 className="font-bold text-heading-xl leading-heading-xl text-center max-w-2xl px-14">
           Dozens of apps.
           <br />
           One subscription.
@@ -65,31 +65,31 @@ export default function Hero({ }: Props) {
           {/* Main button */}
           <a
             href="#"
-            className="bg-white text-black font-normal rounded-btn flex items-center justify-center px-[clamp(1.2rem,3vw,1.875rem)] h-[clamp(2.5rem,5vw,3.75rem)] text-[clamp(0.875rem,2vw,1rem)] cursor-pointer transition-transform hover:scale-105"
+            className="bg-white text-black font-normal rounded-btn flex items-center justify-center px-spacing-btn-x h-spacing-btn-y text-btn cursor-pointer transition-transform hover:scale-105"
           >
             Try free for 7 days
           </a>
 
           {/* Store icons */}
-          <div className="flex items-center gap-[clamp(0.5rem,2vw,0.75rem)] mt-3 sm:mt-0">
+          <div className="flex items-center gap-spacing-gap mt-3 sm:mt-0">
             <a
               href="#"
-              className="bg-white rounded-btn flex justify-center items-center shadow-lg w-[clamp(2.5rem,5vw,3.75rem)] h-[clamp(2.5rem,5vw,3.75rem)] transition-transform hover:scale-105 cursor-pointer"
+              className="bg-white rounded-btn flex justify-center items-center shadow-lg w-size-btn-icon h-size-btn-icon transition-transform hover:scale-105 cursor-pointer"
             >
               <img
                 src={appleStore}
                 alt="Apple Store"
-                className="w-[clamp(1.5rem,3vw,2.5rem)] h-[clamp(1.5rem,3vw,2.5rem)] object-contain"
+                className="w-spacing-icon h-spacing-icon object-contain"
               />
             </a>
             <a
               href="#"
-              className="bg-white rounded-btn flex justify-center items-center shadow-lg w-[clamp(2.5rem,5vw,3.75rem)] h-[clamp(2.5rem,5vw,3.75rem)] transition-transform hover:scale-105 cursor-pointer"
+              className="bg-white rounded-btn flex justify-center items-center shadow-lg w-size-btn-icon h-size-btn-icon transition-transform hover:scale-105 cursor-pointer"
             >
               <img
                 src={googlePlay}
                 alt="Google Play Store"
-                className="w-[clamp(1.5rem,3vw,2.5rem)] h-[clamp(1.5rem,3vw,2.5rem)] object-contain"
+                className="w-spacing-icon h-spacing-icon object-contain"
               />
             </a>
           </div>

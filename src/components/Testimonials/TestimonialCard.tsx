@@ -29,7 +29,7 @@ export default function TestimonialCard({ testimonial }: Props) {
   const showPauseIcon = isSpeaking && !isPaused;
 
   return (
-    <div className="bg-[#765070] rounded-card overflow-hidden min-h-full w-full flex mb-[10px] relative">
+    <div className="bg-testimonial-bg rounded-card overflow-hidden min-h-full w-full flex mb-[10px] relative">
       <div className="flex-1 flex flex-col justify-center px-24 py-16">
         <article>
           {/* Testimonial Content */}

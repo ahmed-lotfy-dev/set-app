@@ -21,9 +21,9 @@ export default function Footer() {
     <footer className="w-full bg-app-bg text-white max-w-[1380px] mx-auto pt-[60px] pb-[40px]">
       {/* Footer Content */}
       <div className="max-w-[1380px] mx-auto px-[30px] py-[40px]">
-        <div className="flex justify-between gap-[230px] w-full shrink-0">
+        <div className="flex flex-col lg:flex-row justify-between gap-[230px] w-full shrink-0">
           {/* Left section logo and subscription */}
-          <div className="flex flex-col w-full gap-8 px-[10px] max-w-[460px]">
+          <div className="flex flex-col w-full shrink gap-8 px-[10px] max-w-[460px]">
             <div className="flex justify-start items-center gap-3 mb-[78px]">
               <div className="flex justify-center items-center">
                 <img src={LogoImage} alt="Setapp Logo" className="w-[20px] h-[32px]" />
@@ -41,7 +41,7 @@ export default function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="flex-1 bg-[#3A3A3F] text-white  border-none placeholder:text-white/40 px-5 py-3.5 rounded-tl-lg rounded-bl-lg font-avenir text-base outline-none focus:ring-2 focus:ring-white/20 transition-all"
+                className="flex-1 bg-input-bg text-white  border-none placeholder:text-white/40 px-5 py-3.5 rounded-tl-lg rounded-bl-lg font-avenir text-base outline-none focus:ring-2 focus:ring-white/20 transition-all"
               />
               <button
                 type="submit"
@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
 
           {/* maptree links of the site */}
-          <div className="flex w-full justify-between">
+          <div className="flex flex-col lg:flex-row w-full justify-between">
             <div className="flex flex-col gap-4 max-w-[230px]">
               <a href="#" className="text-white/90 hover:text-white font-avenir text-base transition-colors">
                 Home
@@ -143,7 +143,7 @@ export default function Footer() {
             <div className="bg-white/30 px-3 py-1.5 rounded-social text-xs font-avenir font-semibold tracking-wide">
               DMCA
             </div>
-            <span className="text-xs font-avenir text-white bg-[#404547] px-3 py-1.5">PROTECTED</span>
+            <span className="text-xs font-avenir text-white bg-protected-bg px-3 py-1.5">PROTECTED</span>
           </div>
           <div className="flex justify-center items-center gap-[9px]">
             <img src={EnglisSvg} alt="flag icon svg" />
