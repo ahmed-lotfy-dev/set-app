@@ -1,31 +1,86 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export const useSpeech = () => {
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const speak = (text: string, rate = 0.9) => {
-    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
-      console.warn("Speech Synthesis not supported");
+  useEffect(() => {
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
+    };
+  }, []);
+
+  const speak = async (text: string) => {
+    if (!text || text.trim().length === 0) return;
+
+    // specific check for puter existence
+    if (typeof window === "undefined" || !window.puter) {
+      console.warn("Puter.js not loaded");
       return;
     }
 
-    if (!text || text.trim().length === 0) return;
-    window.speechSynthesis.cancel();
-    setIsSpeaking(true);
+    try {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
 
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.rate = rate;
-    utterance.onend = () => {
+      setIsSpeaking(true);
+      setIsPaused(false);
+
+      const audio = await window.puter.ai.txt2speech(text, {
+        engine: "generative",
+        language: "en-US",
+      });
+
+      audioRef.current = audio;
+
+      audio.onended = () => {
+        setIsSpeaking(false);
+        setIsPaused(false);
+        audioRef.current = null;
+      };
+
+      audio.onerror = (e) => {
+        console.error("Audio playback error", e);
+        setIsSpeaking(false);
+        setIsPaused(false);
+      };
+
+      await audio.play();
+    } catch (error) {
+      console.error("Puter TTS error:", error);
       setIsSpeaking(false);
-    };
-
-    utterance.onerror = (event) => {
-      console.error("SpeechSynthesis error", event);
-      setIsSpeaking(false);
-    };
-
-    window.speechSynthesis.speak(utterance);
+      setIsPaused(false);
+    }
   };
 
-  return { speak, isSpeaking };
+  const pause = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      setIsPaused(true);
+    }
+  };
+
+  const resume = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+      setIsPaused(false);
+    }
+  };
+
+  const stop = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current = null;
+    }
+    setIsSpeaking(false);
+    setIsPaused(false);
+  };
+
+  return { speak, pause, resume, stop, isSpeaking, isPaused };
 };
