@@ -61,17 +61,25 @@ export default function Testimonials({ }: Props) {
   };
 
   return (
-    <section className="w-full px-6 pt-[70px]">
+    <section className="w-full px-6 pt-10 md:pt-[70px]">
       <div className="max-w-[1355px] m-auto">
         <div className="flex items-center justify-between relative">
-          {/* Testimonial Card */}
+          {/* Navigation Arrows */}
           <button
+<<<<<<< HEAD
             className="absolute top-position-nav-top right-position-nav-right-far z-10 cursor-pointer hover:opacity-70 transition-opacity"
+=======
+            className="absolute top-[40px] md:top-[64px] right-[76px] md:right-[106px] z-10 cursor-pointer hover:opacity-70 transition-opacity"
+>>>>>>> 67d7ec0 (Add responsive to all component beside desktop that was only present in figma taking descieion based on my knowledge about ui/ux,up to my knowledge other screens wasn't present in the figma and migrate some fixed px to tailwind numbers to it be dynamic calculated i guess and add md:,ld: for resposnive)
             onClick={prevSlide}>
             <img src={carouselArrowLeft} alt="" className="w-3.5 h-6" />
           </button>
           <button
+<<<<<<< HEAD
             className="absolute top-position-nav-top right-position-nav-right-near z-10 cursor-pointer hover:opacity-70 transition-opacity"
+=======
+            className="absolute top-[40px] md:top-[64px] right-[16px] md:right-[46px] z-10 cursor-pointer hover:opacity-70 transition-opacity"
+>>>>>>> 67d7ec0 (Add responsive to all component beside desktop that was only present in figma taking descieion based on my knowledge about ui/ux,up to my knowledge other screens wasn't present in the figma and migrate some fixed px to tailwind numbers to it be dynamic calculated i guess and add md:,ld: for resposnive)
             onClick={nextSlide}>
             <img src={carouselArrowRight} alt="" className="w-3.5 h-6" />
           </button>

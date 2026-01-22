@@ -20,7 +20,7 @@ const shapeVariants: Variants = {
 
 export default function RightShapes() {
   return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+    <div className="absolute top-0 right-0 inset-0 pointer-events-none overflow-hidden">
       {/* First Shape */}
       <motion.div variants={shapeVariants} className="absolute top-[3%] md:top-[6%] lg:top-[5%] right-[3%] md:right-[3%] lg:right-[2%]">
         <div className="relative flex justify-center items-center w-[clamp(5rem,20vw,12.5rem)] h-[clamp(3.25rem,10vw,7.875rem)]">

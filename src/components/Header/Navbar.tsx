@@ -57,7 +57,7 @@ export default function Navbar({ onComplete }: Props) {
 
   return (
     <motion.nav
-      className='w-full flex justify-between items-center mt-3 gap-6.5 relative'
+      className='w-full h-full flex justify-between items-center mt-3 gap-6.5 relative'
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -68,6 +68,17 @@ export default function Navbar({ onComplete }: Props) {
         src={LogoImage}
         alt="Setapp Logo"
       />
+
+      {/* Mobile Menu Trigger - Positioned here to avoid stagger delay, visible only on small screens */}
+      <motion.div
+        variants={itemVariants}
+        className="flex ml-auto md:hidden cursor-pointer"
+        onClick={mobileNavHandler}
+      >
+        <img src={MobileMenu} alt="mobile-menu-button" />
+      </motion.div>
+
+      {/* Desktop Navigation - Hidden on mobile, flex on desktop */}
       <ul className="hidden md:flex justify-end items-center gap-2 md:gap-5 md:w-full lg:gap-6.5">
         {navItems.map((item, index) => {
           if (item.type === 'link') {
@@ -118,11 +129,6 @@ export default function Navbar({ onComplete }: Props) {
           return null;
         })}
       </ul>
-
-      {/* Mobile Menu */}
-      <div className="flex ml-auto md:hidden cursor-pointer" onClick={mobileNavHandler}>
-        <img src={MobileMenu} alt="mobile-menu-button" />
-      </div>
 
       <AnimatePresence>
         {isMenuOpen && (

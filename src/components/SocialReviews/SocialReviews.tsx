@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState, useMemo } from "react"
+import { useMediaQuery } from "../../hooks/useMediaQuery"
 import facebook from "../../assets/icons/social-fb-icon.svg"
 import twitter from "../../assets/icons/social-twitter-icon.svg"
 import instagram from "../../assets/icons/social-instagram-icon.svg"
@@ -79,13 +80,22 @@ const reviews = [
   }
 ];
 
-const chunkSize = 3;
-const chunks = Array.from({ length: Math.ceil(reviews.length / chunkSize) }, (_, i) =>
-  reviews.slice(i * chunkSize, i * chunkSize + chunkSize)
-);
-
 export default function SocialReviews({ }: Props) {
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const chunkSize = isDesktop ? 3 : 1;
+
+  const chunks = useMemo(() => {
+    return Array.from({ length: Math.ceil(reviews.length / chunkSize) }, (_, i) =>
+      reviews.slice(i * chunkSize, i * chunkSize + chunkSize)
+    );
+  }, [chunkSize]);
+
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Reset index if it goes out of bounds on resize
+  if (currentIndex >= chunks.length && chunks.length > 0) {
+    setCurrentIndex(chunks.length - 1);
+  }
 
   const nextSlide = () => {
     setCurrentIndex((prev) =>
@@ -103,20 +113,30 @@ export default function SocialReviews({ }: Props) {
     setCurrentIndex(index);
   };
   return (
+<<<<<<< HEAD
     <section className="w-full bg-section-bg text-text-dark py-[88px]">
       <div className="max-w-[1260px] m-auto px-6 relative">
+=======
+    <section className="w-full bg-[#FEFEFE] text-[#26262B] pt-10 pb-20">
+      <div className="max-w-[1440px] m-auto px-6 relative">
+>>>>>>> 67d7ec0 (Add responsive to all component beside desktop that was only present in figma taking descieion based on my knowledge about ui/ux,up to my knowledge other screens wasn't present in the figma and migrate some fixed px to tailwind numbers to it be dynamic calculated i guess and add md:,ld: for resposnive)
         {/* Social Heading Area */}
-        <div className="flex justify-between items-center gap-[180px] mb-[25px]">
+        <div className="flex justify-between flex-1 flex-col md:flex-row items-center text-center md:text-start mt-24.75 pb-10 md:px-2.75">
           <h2 className="text-[48px] font-semibold leading-[58px] tracking-tight max-w-[500px]">
             Setapp in your words.
           </h2>
 
+<<<<<<< HEAD
           <div className="flex items-center gap-10 flex-1">
             <p className="text-[18px] font-normal leading-[32px] text-text-dark/60 max-w-[300px]">
+=======
+          <div className="flex items-center flex-col md:flex-row gap-10">
+            <p className="text-[18px] font-normal leading-[32px] text-[#26262B]/60 max-w-[300px] flex-1">
+>>>>>>> 67d7ec0 (Add responsive to all component beside desktop that was only present in figma taking descieion based on my knowledge about ui/ux,up to my knowledge other screens wasn't present in the figma and migrate some fixed px to tailwind numbers to it be dynamic calculated i guess and add md:,ld: for resposnive)
               What you say about how Setapp powers you up.
             </p>
 
-            <div className="flex justify-center items-center gap-[10px] ml-auto">
+            <div className="flex justify-center items-center gap-2.5 md:ml-auto">
               <a href="#" target="_blank" className="hover:opacity-70 transition-opacity">
                 <img src={facebook} alt="Facebook" />
               </a>
@@ -155,7 +175,7 @@ export default function SocialReviews({ }: Props) {
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {chunks.map((chunk, chunkIndex) => (
-              <div key={chunkIndex} className="min-w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div key={chunkIndex} className={`min-w-full grid gap-6 ${isDesktop ? "grid-cols-3" : "grid-cols-1"}`}>
                 {chunk.map((review, idx) => (
                   <ReviewCard key={idx} {...review} />
                 ))}

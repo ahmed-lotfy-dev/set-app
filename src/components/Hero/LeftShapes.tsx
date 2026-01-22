@@ -20,7 +20,7 @@ const shapeVariants: Variants = {
 
 export default function LeftShapes() {
   return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+    <div className="absolute top-0 left-0 inset-0 pointer-events-none overflow-hidden">
       {/* First Shape */}
       <motion.div variants={shapeVariants} className="absolute top-[2%] md:top-[4%] lg:top-[5%] left-[2%] md:left-[5%]">
         <div className="relative flex justify-center items-center w-[clamp(6rem,14vw,11rem)] h-[clamp(6rem,14vw,11rem)]">

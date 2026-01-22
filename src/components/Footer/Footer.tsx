@@ -18,17 +18,25 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-app-bg text-white max-w-[1380px] mx-auto pt-[60px] pb-[40px]">
+    <footer className="w-full bg-app-bg text-white max-w-[1440px] mx-auto pt-14.75 pb-10">
       {/* Footer Content */}
+<<<<<<< HEAD
       <div className="max-w-[1380px] mx-auto px-[30px] py-[40px]">
         <div className="flex flex-col lg:flex-row justify-between gap-[230px] w-full shrink-0">
           {/* Left section logo and subscription */}
           <div className="flex flex-col w-full shrink gap-8 px-[10px] max-w-[460px]">
             <div className="flex justify-start items-center gap-3 mb-[78px]">
+=======
+      <div className="px-6 md:px-7.5 py-10">
+        <div className="flex flex-col md:flex-row justify-between gap-12 lg:gap-20 w-full shrink-0">
+          {/* Left section logo and subscription */}
+          <div className="flex flex-col w-full gap-8 md:px-2.5 max-w-115">
+            <div className="flex justify-start items-center gap-3 mb-10 md:mb-19.5">
+>>>>>>> 67d7ec0 (Add responsive to all component beside desktop that was only present in figma taking descieion based on my knowledge about ui/ux,up to my knowledge other screens wasn't present in the figma and migrate some fixed px to tailwind numbers to it be dynamic calculated i guess and add md:,ld: for resposnive)
               <div className="flex justify-center items-center">
-                <img src={LogoImage} alt="Setapp Logo" className="w-[20px] h-[32px]" />
+                <img src={LogoImage} alt="Setapp Logo" className="w-5 h-8" />
               </div>
-              <span className="font-avenir font-semibold text-xl tracking-wide">SETAPP</span>
+              <span className="font-avenir font-semibold text-xl tracking-wide uppercase">SETAPP</span>
             </div>
 
             <p className="text-white/80 text-base font-avenir leading-7">
@@ -53,8 +61,13 @@ export default function Footer() {
           </div>
 
           {/* maptree links of the site */}
+<<<<<<< HEAD
           <div className="flex flex-col lg:flex-row w-full justify-between">
             <div className="flex flex-col gap-4 max-w-[230px]">
+=======
+          <div className="flex flex-col sm:flex-row w-full justify-between gap-10 md:gap-0">
+            <div className="flex flex-col gap-4 min-w-[150px]">
+>>>>>>> 67d7ec0 (Add responsive to all component beside desktop that was only present in figma taking descieion based on my knowledge about ui/ux,up to my knowledge other screens wasn't present in the figma and migrate some fixed px to tailwind numbers to it be dynamic calculated i guess and add md:,ld: for resposnive)
               <a href="#" className="text-white/90 hover:text-white font-avenir text-base transition-colors">
                 Home
               </a>
@@ -81,7 +94,7 @@ export default function Footer() {
               </a>
             </div>
 
-            <div className="flex flex-col gap-4 max-w-[230px]">
+            <div className="flex flex-col gap-4 min-w-[200px]">
               <a href="#" className="text-white/90 hover:text-white font-avenir text-base transition-colors">
                 About
               </a>
@@ -114,7 +127,7 @@ export default function Footer() {
               </a>
             </div>
 
-            <div className="flex flex-col gap-4 max-w-[230px]">
+            <div className="flex flex-col gap-4 min-w-[200px]">
               <a href="#" className="text-white/90 hover:text-white font-avenir text-base transition-colors">
                 Getting started with Setapp
               </a>
@@ -138,14 +151,14 @@ export default function Footer() {
         </div>
 
         {/* dmca protected and language switcher */}
-        <div className="flex justify-between my-[40px] px-[15px] ">
-          <div className="flex items-center w-[125px] h-[23px]">
+        <div className="flex flex-col md:flex-row justify-between gap-6 my-10 px-3.75 ">
+          <div className="flex items-center w-31.25 h-5.75">
             <div className="bg-white/30 px-3 py-1.5 rounded-social text-xs font-avenir font-semibold tracking-wide">
               DMCA
             </div>
             <span className="text-xs font-avenir text-white bg-protected-bg px-3 py-1.5">PROTECTED</span>
           </div>
-          <div className="flex justify-center items-center gap-[9px]">
+          <div className="flex justify-center items-center gap-2.25">
             <img src={EnglisSvg} alt="flag icon svg" />
             <span className="text-md font-avenir font-normal">English</span>
             <img
@@ -157,17 +170,17 @@ export default function Footer() {
         </div>
 
         {/* footer text & social links */}
-        <div className="px-[15px]">
-          <div className="border-t border-white pt-8 px-[15px]"></div>
-          <div className="flex justify-between items-center">
+        <div className="px-3.75">
+          <div className="border-t border-white pt-8 mb-8 md:mb-0 md:px-3.75"></div>
+          <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-0">
             {/* Left side */}
-            <div className="flex flex-col gap-[12px]">
-              <p className="text-white text-xs font-avenir font-normal leading-[21.36px] pb-[5px]">
+            <div className="flex flex-col gap-3 text-center md:text-left">
+              <p className="text-white text-xs font-avenir font-normal leading-[21.36px] max-w-[600px]">
                 © 2023 Setapp Limited, 9 Tallow Street, Youghal, Co. Cork, P36Y414, Ireland. Reg. 584165. VAT ID: IE3425901BH
               </p>
             </div>
             {/* Social Icons */}
-            <div className="flex items-center gap-[12px]">
+            <div className="flex items-center gap-3">
               <a href="#" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
                 <img src={facebookIcon} alt="Facebook" className="w-6 h-6" />
               </a>
@@ -185,7 +198,7 @@ export default function Footer() {
         </div>
 
         {/* Terms of use and privacy policy */}
-        <div className="flex gap-[16px] py-[20px] px-[15px]">
+        <div className="flex justify-center md:justify-start gap-4 py-5 px-3.75">
           <a href="#" className="text-white/50 leading-[21.36px] font-normal text-xs font-avenir transition-colors">
             Terms of Use
           </a>
