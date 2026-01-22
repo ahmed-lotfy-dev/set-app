@@ -48,13 +48,8 @@ export default function Hero({ }: Props) {
       {/* Middle Content Wrapper */}
       <motion.div variants={centerVariants} className="flex flex-col items-center z-20">
         {/* logo centered content */}
-<<<<<<< HEAD
         <div className="bg-black w-size-logo-w h-size-logo-h flex justify-center items-center squircle-soft mb-9.75">
           <img src={LogoImage} alt="Header Logo" className="w-size-logo-w h-size-logo-h px-8.5 py-4.5" />
-=======
-        <div className="bg-black w-24 md:w-32 lg:w-40 h-24 md:h-32 lg:h-40  flex justify-center items-center squircle-soft mb-9.75 ">
-          <img src={LogoImage} alt="Header Logo" className="w-24 md:w-32 lg:w-40 h-24 md:h-32 lg:h-40 sm:px-6.5 px-8.5 sm:py-4 md:py-5 lg:py-6" />
->>>>>>> 67d7ec0 (Add responsive to all component beside desktop that was only present in figma taking descieion based on my knowledge about ui/ux,up to my knowledge other screens wasn't present in the figma and migrate some fixed px to tailwind numbers to it be dynamic calculated i guess and add md:,ld: for resposnive)
         </div>
         {/* app catch phrase */}
         <h2 className="font-bold text-heading-xl leading-heading-xl text-center max-w-2xl px-14">
@@ -101,7 +96,7 @@ export default function Hero({ }: Props) {
         </div>
 
 
-        <p className="text-white font-normal text-lg text-center max-w-80 leading-[32px]">
+        <p className="text-white font-normal text-lg text-center max-w-80 leading-8">
           Power up your workflow with Setapp, a<br />
           smart way to get apps.
         </p>

@@ -61,25 +61,17 @@ export default function Testimonials({ }: Props) {
   };
 
   return (
-    <section className="w-full px-6 pt-10 md:pt-[70px]">
-      <div className="max-w-[1355px] m-auto">
+    <section className="w-full px-6 pt-10 md:pt-17.5">
+      <div className="max-w-338.75 m-auto">
         <div className="flex items-center justify-between relative">
           {/* Navigation Arrows */}
           <button
-<<<<<<< HEAD
-            className="absolute top-position-nav-top right-position-nav-right-far z-10 cursor-pointer hover:opacity-70 transition-opacity"
-=======
-            className="absolute top-[40px] md:top-[64px] right-[76px] md:right-[106px] z-10 cursor-pointer hover:opacity-70 transition-opacity"
->>>>>>> 67d7ec0 (Add responsive to all component beside desktop that was only present in figma taking descieion based on my knowledge about ui/ux,up to my knowledge other screens wasn't present in the figma and migrate some fixed px to tailwind numbers to it be dynamic calculated i guess and add md:,ld: for resposnive)
+            className="absolute top-10 md:top-16 right-4 md:right-11.5 z-10 cursor-pointer hover:opacity-70 transition-opacity"
             onClick={prevSlide}>
             <img src={carouselArrowLeft} alt="" className="w-3.5 h-6" />
           </button>
           <button
-<<<<<<< HEAD
-            className="absolute top-position-nav-top right-position-nav-right-near z-10 cursor-pointer hover:opacity-70 transition-opacity"
-=======
-            className="absolute top-[40px] md:top-[64px] right-[16px] md:right-[46px] z-10 cursor-pointer hover:opacity-70 transition-opacity"
->>>>>>> 67d7ec0 (Add responsive to all component beside desktop that was only present in figma taking descieion based on my knowledge about ui/ux,up to my knowledge other screens wasn't present in the figma and migrate some fixed px to tailwind numbers to it be dynamic calculated i guess and add md:,ld: for resposnive)
+            className="absolute top-10 md:top-16 right-4 md:right-11.5 z-10 cursor-pointer hover:opacity-70 transition-opacity"
             onClick={nextSlide}>
             <img src={carouselArrowRight} alt="" className="w-3.5 h-6" />
           </button>
@@ -98,7 +90,7 @@ export default function Testimonials({ }: Props) {
           </div>
         </div>
         {/* Pagination Dots - Below the card */}
-        <div className="flex justify-center items-center gap-3 my-[24px]">
+        <div className="flex justify-center items-center gap-3 my-6">
           {testimonials.map((_, index) => (
             <button
               key={index}

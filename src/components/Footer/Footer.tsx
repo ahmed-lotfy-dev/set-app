@@ -18,21 +18,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-app-bg text-white max-w-[1440px] mx-auto pt-14.75 pb-10">
+    <footer className="w-full bg-app-bg text-white max-w-360 mx-auto pt-14.75 pb-10">
       {/* Footer Content */}
-<<<<<<< HEAD
-      <div className="max-w-[1380px] mx-auto px-[30px] py-[40px]">
-        <div className="flex flex-col lg:flex-row justify-between gap-[230px] w-full shrink-0">
+      <div className="max-w-345 mx-auto px-7.5 py-10">
+        <div className="flex flex-col lg:flex-row justify-between gap-57.5 w-full shrink-0">
           {/* Left section logo and subscription */}
-          <div className="flex flex-col w-full shrink gap-8 px-[10px] max-w-[460px]">
-            <div className="flex justify-start items-center gap-3 mb-[78px]">
-=======
-      <div className="px-6 md:px-7.5 py-10">
-        <div className="flex flex-col md:flex-row justify-between gap-12 lg:gap-20 w-full shrink-0">
-          {/* Left section logo and subscription */}
-          <div className="flex flex-col w-full gap-8 md:px-2.5 max-w-115">
-            <div className="flex justify-start items-center gap-3 mb-10 md:mb-19.5">
->>>>>>> 67d7ec0 (Add responsive to all component beside desktop that was only present in figma taking descieion based on my knowledge about ui/ux,up to my knowledge other screens wasn't present in the figma and migrate some fixed px to tailwind numbers to it be dynamic calculated i guess and add md:,ld: for resposnive)
+          <div className="flex flex-col w-full shrink gap-8 px-2.5 max-w-115">
+            <div className="flex justify-start items-center gap-3 mb-19.5">
               <div className="flex justify-center items-center">
                 <img src={LogoImage} alt="Setapp Logo" className="w-5 h-8" />
               </div>
@@ -61,13 +53,8 @@ export default function Footer() {
           </div>
 
           {/* maptree links of the site */}
-<<<<<<< HEAD
           <div className="flex flex-col lg:flex-row w-full justify-between">
-            <div className="flex flex-col gap-4 max-w-[230px]">
-=======
-          <div className="flex flex-col sm:flex-row w-full justify-between gap-10 md:gap-0">
-            <div className="flex flex-col gap-4 min-w-[150px]">
->>>>>>> 67d7ec0 (Add responsive to all component beside desktop that was only present in figma taking descieion based on my knowledge about ui/ux,up to my knowledge other screens wasn't present in the figma and migrate some fixed px to tailwind numbers to it be dynamic calculated i guess and add md:,ld: for resposnive)
+            <div className="flex flex-col gap-4 max-w-57.5">
               <a href="#" className="text-white/90 hover:text-white font-avenir text-base transition-colors">
                 Home
               </a>
@@ -94,7 +81,7 @@ export default function Footer() {
               </a>
             </div>
 
-            <div className="flex flex-col gap-4 min-w-[200px]">
+            <div className="flex flex-col gap-4 min-w-50">
               <a href="#" className="text-white/90 hover:text-white font-avenir text-base transition-colors">
                 About
               </a>
@@ -127,7 +114,7 @@ export default function Footer() {
               </a>
             </div>
 
-            <div className="flex flex-col gap-4 min-w-[200px]">
+            <div className="flex flex-col gap-4 min-w-50">
               <a href="#" className="text-white/90 hover:text-white font-avenir text-base transition-colors">
                 Getting started with Setapp
               </a>
@@ -164,7 +151,7 @@ export default function Footer() {
             <img
               src={ArrowDown}
               alt="language switch arrow button"
-              className="w-[10px] h-[10px]"
+              className="w-2.5 h-2.5"
             />
           </div>
         </div>
@@ -175,7 +162,7 @@ export default function Footer() {
           <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-0">
             {/* Left side */}
             <div className="flex flex-col gap-3 text-center md:text-left">
-              <p className="text-white text-xs font-avenir font-normal leading-[21.36px] max-w-[600px]">
+              <p className="text-white text-xs font-avenir font-normal leading-[21.36px] max-w-150">
                 © 2023 Setapp Limited, 9 Tallow Street, Youghal, Co. Cork, P36Y414, Ireland. Reg. 584165. VAT ID: IE3425901BH
               </p>
             </div>
